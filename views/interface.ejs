@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>node js</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <table id="prod">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+      <% data.products.forEach(function(entry){ %>
+      <tr>
+        <td><%= entry.id %></td>
+        <td><%= entry.Name %></td>
+        <td><%= entry.Quantity %></td>
+        <td><%= entry.Price %></td>
+        <td>
+          <button id="but"><a href="/buy/ <%=entry.id %>">Buy now</a></button>
+        </td>
+      </tr>
+
+      <% }) %>
+    </table>
+
+    <table id="cl">
+      <tr>
+        <th>SSN</th>
+        <th>Client Name</th>
+        <th>Age</th>
+        <th>Balance</th>
+      </tr>
+      <% data.client.forEach(function(entry2){ %>
+      <tr>
+        <td><%= entry2.SSN %></td>
+        <td><%= entry2.CLName %></td>
+        <td><%= entry2.Age %></td>
+        <td><%= entry2.Balance %></td>
+      </tr>
+      
+
+      <% }) %>
+    </table>
+  </body>
+</html>
